@@ -1,0 +1,36 @@
+body {
+    width: 204px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table {
+    border: 4px solid black;
+    border-collapse: collapse;
+}
+
+table td {
+    width: 64px;
+    height: 64px;
+    border: 2px dashed black;
+    font-size: 200%;
+}
+
+.win {
+    color: lime;
+}
+
+#new_game {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 200%;
+}
+
+.emphasis {
+    color: red;
+}
+
+.gone {
+    display: none;
+}
