@@ -28,3 +28,14 @@ RandomOpponent.prototype.play = function(game_board, x, o, available) {
     // Pick a random cell index from the available list
     return available[indexPick];
 }
+//Creates a function for the difficulty hard.
+function Hard() {
+    Opponent.call(this);
+    this.name = "Hard";
+}
+// Copy the base class prototyp, but keep the constructor
+RandomOpponent.prototype = Object.create(Opponent.prototype);
+RandomOpponent.prototype.constructor = RandomOpponent;
+// Override the play function
+RandomOpponent.prototype.play = function(game_board, x, o, available) {
+}
