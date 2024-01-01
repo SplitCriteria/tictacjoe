@@ -1,7 +1,7 @@
 // A global flag which indicates if the game is over (someone won, or a tie)
 var game_over = false;
 // A list of all the available opponents for the user to pick from
-var opponents = [new Opponent(), new RandomOpponent()];
+var opponents = [new Opponent(), new RandomOpponent(), new SmartOpponent()];
 // A list of losing responses from the opponent
 var loser_responses = ['You win! Beginner\'s luck I guess...',
                        'You win again - I\'ll get you next time...',
@@ -61,11 +61,11 @@ function update_game_info() {
     var score = document.getElementById('score');
     var scores = persistentData.getScores();
     score.innerHTML = 'Wins: ' + scores.win + ' Losses: ' + scores.loss + ' Ties: ' + scores.tie;
-    // Show the plea for help if the player has won a bunch
-    if (scores.win >= 10) {
-        var plea = document.getElementById('plea_for_help');
-        plea.classList.remove('gone');
-    }
+    // Show the plea for help if the player has won a bunch EDIT: plea is no longer needed
+    // if (scores.win >= 10) {
+    //     var plea = document.getElementById('plea_for_help');
+    //     plea.classList.remove('gone');
+    // }
 }
 
 // Returns an array of game cells with the inner contents trimmed
